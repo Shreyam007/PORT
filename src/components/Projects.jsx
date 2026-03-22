@@ -1,0 +1,176 @@
+import React from 'react'
+import RevealOnScroll from './RevealOnScroll.jsx'
+
+const projects = [
+  {
+    id: 1,
+    title: 'Universal File Converter',
+    description:
+      'A powerful web application that allows users to convert between multiple file formats seamlessly. Supports images, documents, audio, and video conversions with a clean, intuitive interface.',
+    image: '/project1.jpg',
+    tags: ['React', 'File API', 'Node.js', 'FFmpeg'],
+    liveUrl: 'https://file-converter-full-stack.vercel.app/',
+    gradient: 'from-purple-600/30 to-blue-600/30',
+    accentColor: '#a855f7',
+  },
+  {
+    id: 2,
+    title: 'Study Buddy Finder',
+    description:
+      'A social platform that connects students with compatible study partners based on subjects, learning styles, and schedules. Features real-time chat, session scheduling, and progress tracking.',
+    image: '/project2.jpg',
+    tags: ['React', 'Social', 'Firebase', 'Real-time'],
+    liveUrl: 'https://deluxe-buttercream-1e5cfa.netlify.app/',
+    gradient: 'from-blue-600/30 to-pink-600/30',
+    accentColor: '#3b82f6',
+  },
+  {
+    id: 3,
+    title: 'Full Stack Offer Tracker',
+    description:
+      'Developed and deployed a production-ready job tracking platform featuring database-backed authentication, OTP recovery, AI resume parsing, match prediction, mock interview system, and modular dashboard architecture. Managed routing, environment configuration, and live deployment on Vercel.',
+    image: '/project3.jpg',
+    tags: ['Next.js', 'AI', 'Vercel', 'PostgreSQL', 'Full Stack'],
+    liveUrl: 'https://offer-tracker-omega.vercel.app/',
+    gradient: 'from-emerald-600/30 to-blue-600/30',
+    accentColor: '#10b981',
+  },
+  {
+    id: 4,
+    title: 'PLAGIARISM-X',
+    description:
+      'A privacy-focused, browser-based code plagiarism detector. Uses fingerprint-based Winnowing (k-gram + rolling hash), supports JS, Python, Java, C++, and more. Features real-time scanning, interactive similarity graph, side-by-side diff viewer, risk classification, and one-click PDF report generation — 100% local processing, no data leaves your device.',
+    image: '/project4.png',
+    tags: ['React', 'Winnowing Alg', 'Security', 'Local Processing'],
+    liveUrl: 'https://plagiarism-x.vercel.app/',
+    gradient: 'from-teal-600/30 to-cyan-600/30',
+    accentColor: '#0ea5e9',
+  },
+]
+
+
+function ProjectCard({ project, index }) {
+  return (
+    <RevealOnScroll delay={index * 150}>
+      <div className="project-card glass rounded-3xl overflow-hidden group">
+        {/* Image */}
+        <div className="relative h-56 overflow-hidden">
+          <div
+            className={`absolute inset-0 bg-gradient-to-br ${project.gradient}`}
+            style={{ zIndex: 1 }}
+          />
+          <img
+            src={project.image}
+            alt={`${project.title} Preview`}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            onError={(e) => { e.target.style.display = 'none' }}
+          />
+          {/* Overlay on hover */}
+          <div
+            className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style={{ zIndex: 2 }}
+          />
+          {/* Animated accent line */}
+          <div
+            className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-500"
+            style={{ background: `linear-gradient(to right, ${project.accentColor}, #3b82f6)`, zIndex: 3 }}
+          />
+        </div>
+
+        {/* Content */}
+        <div className="p-6">
+          <h3 className="font-space font-bold text-xl text-white mb-3">{project.title}</h3>
+          <p className="text-gray-400 text-sm font-outfit leading-relaxed mb-4">{project.description}</p>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2 mb-5">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 rounded-full text-xs font-outfit font-medium"
+                style={{
+                  background: `${project.accentColor}20`,
+                  color: project.accentColor,
+                  border: `1px solid ${project.accentColor}30`,
+                }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          {/* Link */}
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-outfit font-semibold transition-all duration-300 hover:gap-3"
+            style={{ color: project.accentColor }}
+          >
+            View Live Project
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" x2="21" y1="14" y2="3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </RevealOnScroll>
+  )
+}
+
+export default function Projects() {
+  return (
+    <section id="projects" className="relative py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <RevealOnScroll>
+          <div className="text-center mb-16">
+            <h2 className="font-space font-bold text-4xl sm:text-5xl text-white mb-4">
+              Featured{' '}
+              <span
+                style={{
+                  background: 'linear-gradient(135deg, #a855f7, #ec4899)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Projects
+              </span>
+            </h2>
+            <p className="text-gray-500 text-lg font-outfit">A selection of work I'm proud of.</p>
+          </div>
+        </RevealOnScroll>
+
+        {/* Project Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {projects.map((project, i) => (
+            <ProjectCard key={project.id} project={project} index={i} />
+          ))}
+        </div>
+
+        {/* GitHub CTA */}
+        <RevealOnScroll delay={200}>
+          <div className="text-center mt-12">
+            <a
+              href="https://github.com/Shreyam007"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-white font-semibold font-outfit border border-white/10 glass hover:border-purple-500/50 hover:bg-purple-500/10 transition-all duration-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                <path d="M9 18c-4.51 2-5-2-7-2"/>
+              </svg>
+              View All Projects on GitHub
+            </a>
+          </div>
+        </RevealOnScroll>
+      </div>
+    </section>
+  )
+}
