@@ -53,8 +53,8 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Reduced preloader time from 2500ms to 800ms to drastically improve Largest Contentful Paint (LCP) for SEO
-    const timer = setTimeout(() => setLoading(false), 800)
+    // Increased preloader time to 2000ms so the new Black Hole animation is fully visible
+    const timer = setTimeout(() => setLoading(false), 2000)
     return () => clearTimeout(timer)
   }, [])
 
