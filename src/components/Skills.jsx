@@ -192,6 +192,33 @@ const tools = [
       </svg>
     ),
   },
+  {
+    name: 'Vercel',
+    color: '#ffffff',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m12 2 10 17.5H2Z" fill="currentColor" stroke="none"/>
+      </svg>
+    ),
+  },
+  {
+    name: 'Docker',
+    color: '#2496ed',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 12.5c0 1-.8 1.5-1.5 1.5h-15c-.7 0-1.5-.5-1.5-1.5 0-.7.3-1 .8-1.5 1.5-1.5 4.7-2 4.7-2s1.3-1.5 2-1.5 2 1.5 2 1.5 3.2.5 4.7 2c.5.5.8.8.8 1.5z"/><path d="M11 6h3v3h-3z"/><path d="M7 9h3v3H7z"/><path d="M11 9h3v3h-3z"/><path d="M15 9h3v3h-3z"/><path d="M11 12h3v3h-3z"/>
+      </svg>
+    ),
+  },
+  {
+    name: 'GitHub Actions',
+    color: '#2088ff',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2v2"/><path d="m16.2 4.2 1.4 1.4"/><path d="M18 12h2"/><path d="m16.2 19.8 1.4-1.4"/><path d="M12 20v2"/><path d="m7.8 19.8-1.4-1.4"/><path d="M4 12H2"/><path d="m7.8 4.2-1.4 1.4"/><circle cx="12" cy="12" r="3"/><path d="m16 16 3 3"/><path d="m19 16-3 3"/>
+      </svg>
+    ),
+  },
 ]
 
 function SkillCard({ skill }) {
