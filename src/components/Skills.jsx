@@ -106,6 +106,52 @@ const languages = [
       </svg>
     ),
   },
+  {
+    name: 'Next.js',
+    color: '#ffffff',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
+        <path d="M18.5 20L9.5 8H8V16H9.5V10.5L17.5 21.2C17.8 20.8 18.2 20.4 18.5 20Z" fill="currentColor" stroke="none"/>
+      </svg>
+    ),
+  },
+  {
+    name: 'Django',
+    color: '#092e20',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 3h20v18H2z"/><path d="M7 7v10"/><path d="M7 12h3c2 0 3-1 3-2.5S12 7 10 7H7"/><path d="M14 17h3"/>
+      </svg>
+    ),
+  },
+  {
+    name: "REST API's",
+    color: '#38bdf8',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 7 7 17"/><path d="M17 17 7 7"/><path d="M20 4v16"/><path d="M4 4v16"/>
+      </svg>
+    ),
+  },
+  {
+    name: 'Express.js',
+    color: '#828282',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 4h16v16H4z"/><path d="M8 8h4"/><path d="M8 12h4"/><path d="M8 16h4"/><path d="M16 8v8"/>
+      </svg>
+    ),
+  },
+  {
+    name: 'PostgreSQL',
+    color: '#336791',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 5V2"/><path d="M5 12H2"/><path d="M19 12h3"/><path d="M12 19v3"/><path d="M12 12m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/>
+      </svg>
+    ),
+  },
 ]
 
 const tools = [
