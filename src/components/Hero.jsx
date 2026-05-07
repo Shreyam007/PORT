@@ -74,7 +74,7 @@ export default function Hero() {
                   </svg>
                 </button>
                 <a
-                  href="https://drive.google.com/file/d/1WWqZLuIg8hBczqpT45_qxoRSGxRxi6gI/view?usp=sharing"
+                  href="https://drive.google.com/file/d/15fnemlqLOytPjbO4tLMHut3A17MSD4my/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-7 py-3.5 rounded-full text-white font-semibold font-outfit border border-purple-500/50 hover:border-purple-500 hover:bg-purple-500/10 transition-all duration-300"
